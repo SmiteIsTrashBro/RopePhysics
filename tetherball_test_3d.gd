@@ -100,13 +100,11 @@ func _physics_process(delta):
 		spheres[i].position = verlet.points[i].pos
 	
 	var net_force = Vector3()
-
-	var tension = calculate_tension(ball.position, verlet.points[-2].pos)
 	net_force.y -= mass * gravity
+	
+	var tension = calculate_tension(ball.position, verlet.points[-2].pos)
 	net_force += tension
-
-
-		
+	
 	var acceleration = net_force/ mass
 	velocity += acceleration * delta
 	ball.position += velocity * delta
