@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://bg4xf85osw14o"]
+
+[ext_resource type="Script" path="res://tetherball_test_3d.gd" id="1_kiqdd"]
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_kiqdd")
+
+[node name="Ball" type="CSGSphere3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.65288, 0, 0)
+radius = 0.3
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.168025, 0.985783, 0, -0.985783, 0.168025, 0, 12.7141, 6.67376)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.35517)
+
+[node name="Pole" type="CSGCylinder3D" parent="."]
+visible = false
+radius = 0.1
+height = 4.0
